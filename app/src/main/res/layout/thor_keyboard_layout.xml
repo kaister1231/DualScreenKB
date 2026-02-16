@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/keyboard_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="6dp"
+    android:background="#000000">
+
+    <!-- Shortcut Row -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="6dp">
+
+        <Button
+            android:id="@+id/btn_win_i"
+            style="@style/ShortcutKeyStyle"
+            android:text="WIN+I" />
+
+        <Button
+            android:id="@+id/btn_ctrl_c"
+            style="@style/ShortcutKeyStyle"
+            android:text="COPY" />
+
+        <Button
+            android:id="@+id/btn_alt_tab"
+            style="@style/ShortcutKeyStyle"
+            android:text="ALT+TAB" />
+
+        <Button
+            android:id="@+id/btn_win_d"
+            style="@style/ShortcutKeyStyle"
+            android:text="WIN+D" />
+    </LinearLayout>
+
+    <!-- Modifier Row -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="6dp">
+
+        <ToggleButton
+            android:id="@+id/btn_ctrl_toggle"
+            style="@style/ModifierStyle"
+            android:textOn="CTRL (ON)"
+            android:textOff="CTRL"
+            android:checked="false" />
+
+        <ToggleButton
+            android:id="@+id/btn_shift_toggle"
+            style="@style/ModifierStyle"
+            android:textOn="SHIFT (ON)"
+            android:textOff="SHIFT"
+            android:checked="false" />
+
+        <ToggleButton
+            android:id="@+id/btn_win_toggle"
+            style="@style/ModifierStyle"
+            android:textOn="WIN (ON)"
+            android:textOff="WIN"
+            android:checked="false" />
+    </LinearLayout>
+
+    <!-- Simple QWERTY row (demo) -->
+    <GridLayout
+        android:id="@+id/keys_grid"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:columnCount="10"
+        android:rowCount="3">
+
+        <Button android:id="@+id/key_q" style="@style/KeyStyle" android:text="Q" />
+        <Button android:id="@+id/key_w" style="@style/KeyStyle" android:text="W" />
+        <Button android:id="@+id/key_e" style="@style/KeyStyle" android:text="E" />
+        <Button android:id="@+id/key_r" style="@style/KeyStyle" android:text="R" />
+        <Button android:id="@+id/key_t" style="@style/KeyStyle" android:text="T" />
+        <Button android:id="@+id/key_y" style="@style/KeyStyle" android:text="Y" />
+        <Button android:id="@+id/key_u" style="@style/KeyStyle" android:text="U" />
+        <Button android:id="@+id/key_i" style="@style/KeyStyle" android:text="I" />
+        <Button android:id="@+id/key_o" style="@style/KeyStyle" android:text="O" />
+        <Button android:id="@+id/key_p" style="@style/KeyStyle" android:text="P" />
+
+        <!-- second row -->
+        <Button android:id="@+id/key_a" style="@style/KeyStyle" android:text="A" />
+        <Button android:id="@+id/key_s" style="@style/KeyStyle" android:text="S" />
+        <Button android:id="@+id/key_d" style="@style/KeyStyle" android:text="D" />
+        <Button android:id="@+id/key_f" style="@style/KeyStyle" android:text="F" />
+        <Button android:id="@+id/key_g" style="@style/KeyStyle" android:text="G" />
+        <Button android:id="@+id/key_h" style="@style/KeyStyle" android:text="H" />
+        <Button android:id="@+id/key_j" style="@style/KeyStyle" android:text="J" />
+        <Button android:id="@+id/key_k" style="@style/KeyStyle" android:text="K" />
+        <Button android:id="@+id/key_l" style="@style/KeyStyle" android:text="L" />
+        <Button android:id="@+id/key_enter" style="@style/KeyStyle" android:text="Enter" />
+
+        <!-- third row -->
+        <Button android:id="@+id/key_z" style="@style/KeyStyle" android:text="Z" />
+        <Button android:id="@+id/key_x" style="@style/KeyStyle" android:text="X" />
+        <Button android:id="@+id/key_c" style="@style/KeyStyle" android:text="C" />
+        <Button android:id="@+id/key_v" style="@style/KeyStyle" android:text="V" />
+        <Button android:id="@+id/key_b" style="@style/KeyStyle" android:text="B" />
+        <Button android:id="@+id/key_n" style="@style/KeyStyle" android:text="N" />
+        <Button android:id="@+id/key_m" style="@style/KeyStyle" android:text="M" />
+        <Button android:id="@+id/key_space" style="@style/KeyStyle" android:text="Space" />
+        <Button android:id="@+id/key_back" style="@style/KeyStyle" android:text="Back" />
+        <Button android:id="@+id/key_tab" style="@style/KeyStyle" android:text="Tab" />
+    </GridLayout>
+</LinearLayout>
