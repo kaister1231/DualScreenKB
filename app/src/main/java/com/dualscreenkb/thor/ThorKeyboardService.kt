@@ -23,6 +23,26 @@ class ThorKeyboardService : InputMethodService() {
         return view
     }
 
+    override fun onFinishInput() {
+        super.onFinishInput()
+        // Release any active sticky modifiers to prevent "ghost key" issues
+        val ic = currentInputConnection
+        if (ic != null) {
+            if (ctrlSticky) {
+                ic.sendKeyEvent(KeyEvent(KeyEvent.ACTION_UP, KeyEvent.KEYCODE_CTRL_LEFT))
+                ctrlSticky = false
+            }
+            if (shiftSticky) {
+                ic.sendKeyEvent(KeyEvent(KeyEvent.ACTION_UP, KeyEvent.KEYCODE_SHIFT_LEFT))
+                shiftSticky = false
+            }
+            if (winSticky) {
+                ic.sendKeyEvent(KeyEvent(KeyEvent.ACTION_UP, KeyEvent.KEYCODE_META_LEFT))
+                winSticky = false
+            }
+        }
+    }
+
     private fun setupShortcuts(root: View) {
         val btnWinI = root.findViewById<Button>(R.id.btn_win_i)
         val btnCtrlC = root.findViewById<Button>(R.id.btn_ctrl_c)
