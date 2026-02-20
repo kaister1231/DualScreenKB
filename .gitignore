@@ -1,0 +1,17 @@
+# Gradle
+.gradle/
+build/
+**/build/
+
+# Local settings
+local.properties
+
+# Android Studio
+.idea/
+*.iml
+
+# Kotlin/Gradle caches
+/.gradle/
+
+# Other
+.DS_Store

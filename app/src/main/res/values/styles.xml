@@ -1,0 +1,32 @@
+<resources>
+    <style name="Theme.DualScreenKB" parent="Theme.AppCompat.DayNight.DarkActionBar">
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="KeyStyle">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:layout_margin">2dp</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_rowWeight">1</item>
+        <item name="android:layout_columnWeight">1</item>
+        <item name="android:background">@android:drawable/btn_default</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="ShortcutKeyStyle">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_margin">4dp</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:background">@android:drawable/btn_default</item>
+    </style>
+
+    <style name="ModifierStyle">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_margin">4dp</item>
+    </style>
+</resources>
